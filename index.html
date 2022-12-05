@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <title>Site personnel Grégory Labeau</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Site personnel Grégory Labeau"> 
+    <meta name="author" content="Grégory labeau">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <link rel="canonical" href="" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="css/image/logo.png">
+</head>
+
+<body>
+    
+<header>
+    
+    <nav>
+        <a id="resp-menu" class="responsive-menu" href="#"><i class="fa fa-reorder"></i> Menu</a>    
+        <ul class="menu">
+        <li><a class="homer" href="#"><i class="fa fa-home"></i> HOME</a></li>
+        <li><a  href="#"><i class="fa fa-user"></i> PROJET</a></li>
+        <li><a  href="#"><i class="fa fa-camera"></i> A PROPOS</a></li>
+        <li><a  href="#"><i class="fa fa-bullhorn"></i> CONTACT</a></li>
+        </ul>
+    </nav>
+    
+<section id="header">
+    <div class="headerphoto">
+    
+    </div>
+    
+    <div class="headertexte">
+    
+    </div>    
+</section>
+    
+</header>
+    
+<script>
+    
+$(document).ready(function(){ 
+	var touch 	= $('#resp-menu');
+	var menu 	= $('.menu');
+ 
+	$(touch).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+	});
+	
+	$(window).resize(function(){
+		var w = $(window).width();
+		if(w > 767 && menu.is(':hidden')) {
+			menu.removeAttr('style');
+		}
+	});
+	
+});
+    
+</script>    
+    
+</body>
+    
+</html>    
